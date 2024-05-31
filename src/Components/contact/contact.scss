@@ -1,0 +1,126 @@
+@import '../../app.scss';
+
+.contact{
+    letter-spacing: 2px;
+    height: 100%;
+    max-width: 900px;
+    margin:auto ;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @include tablet{
+        width: 80%;
+    }
+    @include mobile{
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        gap: 20px;
+
+    }
+
+    .textContainer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include tablet{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include mobile{
+    
+        width: 50%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+           height: 80px;
+           margin-top: 50px;
+        }
+        h1{
+            font-size: 65px;
+            line-height: 80px;
+            @include tablet{
+                font-size: 30px;
+                line-height: 30px;
+            }
+            @include mobile{
+                font-size: 25px;
+                line-height: 25px;
+               
+                display: flex;
+
+            }
+        }
+        h2{
+            @include tablet{
+                font-size: 20px;
+            }
+            @include mobile{
+                font-size: 20px;
+                display: none;
+            }
+        }
+        span{
+            font-weight: 300;
+
+            @include mobile{
+                font-size: 14px;
+                display: none;
+            }
+        }
+
+    }
+    .formContainer{
+        width: 45%;
+        @include mobile{
+            width: 80%;
+          
+            height: 500px;
+        }
+        form{   
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input,textarea{
+                color: lightgray ;
+                background-color: transparent;
+                padding: 20px;
+                font-size: 15px;
+                width: 100%;
+                border: 1px solid gray;
+                border-radius: 10px;
+                letter-spacing: 2px;
+                outline: none;
+                @include tablet{
+                    padding: 10px;
+                    
+                }
+                @include mobile{
+                    padding: 10px;
+                }
+            }
+            button{
+                letter-spacing: 2px;
+                 background-color: #7202e2;
+                border: none;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 15px;
+                color:white;
+            }
+            button:hover{
+                background-color: #7928ca;
+            }
+        }
+    }
+}

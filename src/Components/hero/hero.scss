@@ -1,0 +1,191 @@
+@import '../../app.scss';
+
+.hero{
+    position: relative;
+    height: calc(100vh - 80px);
+    background: linear-gradient(180deg,#0c0c1d,#111132);
+    overflow: hidden;
+    
+
+        @include mobile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    .wrapper{
+        max-width: 900px;
+        height: 100%;
+        margin: auto ;
+
+        @include tablet{
+            width: 100%;
+            height: unset;
+            margin: unset;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        @include mobile{
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+     
+
+        .text-container{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            @include tablet{
+                position: unset;
+                width: 80%;
+                text-align: center;
+                height: unset;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+            @include mobile{
+               
+                width: 80%;
+                height: 75vh;
+                text-align: center;
+                gap: 20px;
+
+                
+            }
+         
+
+
+            h2{
+
+                font-size: 40px;
+                letter-spacing: 10px;
+                background: #121FCF;
+                background: linear-gradient(90deg,#7928ca,#ff0080);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @include mobile{
+                    font-size: 1.8rem;
+                    text-align: center;
+                }
+            }
+
+            h1{
+                font-size: 16px;
+                letter-spacing: 1.2px;
+                line-height: 20px;
+                span{
+                    background: linear-gradient(90deg,#7928ca,#ff0080);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                }
+                @include mobile{
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                }
+
+            }
+            .buttons{
+                button{
+                    padding: 10px;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    margin-right: 20px;
+                    color: white;
+                    
+                    cursor: pointer;
+                    font-weight: 300;   
+                }
+                button:hover{
+                    background-color: white;
+                    color:#030322;
+                }
+                
+            }
+
+        }
+        img{
+            width: 30px;
+        
+        }
+    }
+
+    .imageContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;;
+        width: 65%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include tablet{
+            top: unset;
+            right: unset;
+            position: unset;
+            height: unset;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        @include mobile{
+            height: 25vh;
+            margin-top: 10px;
+            width: 100%;
+            top: unset;
+            position: relative;
+            right: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+      
+      
+        img{
+            object-fit: cover;
+            position: absolute;
+            top: 140px;
+            right: 250px;
+            width: 30%;
+            cursor: pointer;
+            @include tablet{
+                position: unset;
+                top: unset;
+                right: unset;
+                width: 30%;
+            }
+            @include mobile{
+               
+                position: unset;
+                top: unset;
+                right: unset;
+                width: 150px;
+
+
+            }
+       
+            
+         
+        }
+    }
+}

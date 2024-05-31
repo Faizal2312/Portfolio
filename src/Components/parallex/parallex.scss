@@ -1,0 +1,113 @@
+@import '../../app.scss';
+
+.parallex{
+    width: 100vw; //yha change kra hai 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  
+
+    .skills{
+        z-index: 800;
+        position: absolute;
+        display: flex;
+        top: 140px;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 22%;
+        height: 40%;
+        align-items: center;
+        justify-content: center;
+
+        margin: auto;
+        @include tablet{
+            // top: 100px;
+            width: 50%;
+            height: 50%;
+            gap: 20px;
+        }
+        @include mobile{
+            position: absolute;
+            top: unset;
+            width: unset;
+            height: unset;
+            margin: auto;
+            width: 350px;
+            height: 50vh;
+            // background-color: aqua;
+            flex-wrap: wrap;
+            align-self: center;
+            gap: 10px;
+            
+           
+
+           
+        }
+        img{
+            width: 70px;
+            cursor: pointer;
+            @include mobile{
+            }
+        }
+        .tailwind{
+            border-radius: 50%;
+        }
+    }
+
+    h1{
+        font-size: 80px;
+        letter-spacing: 20px;
+        background: linear-gradient(90deg,#7928ca,#ff0080);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include tablet{
+            margin-top: 15px;
+            font-size: 52px;
+        }
+        @include mobile{
+            font-size: 42px;
+            align-self: center;
+            height: 75vh;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .mountains{
+        background-image: url('/mountains.png');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: bottom;
+        z-index: 3;
+        @include mobile{
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .planets{
+        background-image: url('/planets.png');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: bottom;
+        z-index: 2;
+        @include mobile{
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .stars{
+        background-image: url('/stars.png');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: bottom;
+        z-index: 1;
+    }
+}
